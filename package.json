@@ -1,10 +1,14 @@
 {
   "name": "shai-analyzer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A CLI tool to analyze package dependencies and detect breaking changes",
   "type": "module",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuttodev/shai-analyzer"
+  },
   "scripts": {
     "build": "tsup src/cli/index.ts --format cjs,esm --dts",
     "start": "node dist/cli/index.js",
