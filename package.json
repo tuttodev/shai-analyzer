@@ -1,0 +1,46 @@
+{
+  "name": "shai-analyzer",
+  "version": "0.1.4",
+  "description": "A CLI tool to analyze package dependencies and detect breaking changes",
+  "type": "module",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/cli/index.ts --format cjs,esm --dts",
+    "start": "node dist/cli/index.js",
+    "dev": "ts-node src/cli/index.ts",
+    "dev-local": "pnpm run build && npm link"
+  },
+  "bin": {
+    "shai-analyzer": "bin/shai-analyzer.js"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.8",
+    "axios": "^1.8.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
+    "octokit": "^4.1.2",
+    "openai": "^4.86.1",
+    "semver": "^7.7.1",
+    "ts-morph": "^25.0.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/semver": "^7.5.8",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "dependency",
+    "breaking-changes",
+    "analyzer"
+  ],
+  "author": {
+    "name": "tuttodev",
+    "email": "tuttodevv@gmail.com",
+    "url": "https://tuttodev.dev/"
+  },
+  "license": "MIT"
+}
